@@ -1,28 +1,34 @@
-votosrodri = 0
-votosvinijr = 0
+# Inicializa as variáveis das votações com 0 votos em cada uma
+votos_rodri = 0
+votos_vini_jr = 0
 
-votojurado1 = input()
-paisjurado1 = input()
-votojurado2 = input()
-paisjurado2 = input()
+voto_jurado1 = input()
+pais_jurado1 = input()
 
-if votojurado1 == 'rodri' and paisjurado1 != 'Espanha':
-    votosrodri += 1
+voto_jurado2 = input()
+pais_jurado2 = input()
+
+# Se o voto do 1º jurado é válido
+if voto_jurado1 == 'rodri' and pais_jurado1 != 'Espanha':
+    votos_rodri += 1
     print("Voto registrado!")
-elif votojurado1 == 'vinijr' and paisjurado2 != 'Brasil':
-    votosvinijr += 1
+elif voto_jurado1 == 'vinijr' and pais_jurado1 != 'Brasil':
+    votos_vini_jr += 1
     print("Voto registrado!")
+# Se o voto do 1º jurado é inválido
 else:
     print("Voto inválido! Não é permitido votar em jogadores do mesmo país.")
 
-if votojurado2 == 'rodri' and paisjurado2 != 'Espanha':
-    votosrodri += 1
+# Se o voto do 2º jurado é válido
+if voto_jurado2 == 'rodri' and pais_jurado2 != 'Espanha':
+    votos_rodri += 1
     print("Voto registrado!")
-elif votojurado2 == 'vinijr' and paisjurado2 != 'Brasil':
-    votosvinijr += 1
+elif voto_jurado2 == 'vinijr' and pais_jurado2 != 'Brasil':
+    votos_vini_jr += 1
     print("Voto registrado!")
+# Se o voto do 2º jurado é inválido
 else:
     print("Voto inválido! Não é permitido votar em jogadores do mesmo país.")
 
-print(f"Votos válidos para rodri: {votosrodri}")
-print(f"Votos válidos para vinijr: {votosvinijr}")
+print(f"Votos válidos para rodri: {votos_rodri}") 
+print(f"Votos válidos para vinijr: {votos_vini_jr}")  
