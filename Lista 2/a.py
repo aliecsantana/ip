@@ -6,26 +6,25 @@ outros = 0
 total = 0
 
 # Loop para processar as entradas do usuário até que "FIM" seja digitado, verificando o tipo de presente e incrementando os contadores correspondentes
-while True:
+while entrada != "FIM":
     entrada = input()
-    if entrada == "FIM":
-        break
-    if entrada == "Boneco":
-        print("Mais um presente saindo!")
-        boneco += 1
-        total += 1
-    elif entrada == "Videogame":
-        print("Mais um presente saindo!")
-        videogame += 1
-        total += 1
-    elif entrada == "Bicicleta":
-        print("Mais um presente saindo!")
-        bicicleta += 1
-        total += 1
-    else:
-        print("Esse presente não está sendo fabricado nesse momento")
-        outros += 1
-        total += 1
+    if entrada != "FIM":
+        if entrada == "Boneco":
+            print("Mais um presente saindo!")
+            boneco += 1
+            total += 1
+        elif entrada == "Videogame":
+            print("Mais um presente saindo!")
+            videogame += 1
+            total += 1
+        elif entrada == "Bicicleta":
+            print("Mais um presente saindo!")
+            bicicleta += 1
+            total += 1
+        else:
+            print("Esse presente não está sendo fabricado nesse momento")
+            outros += 1
+            total += 1
 
 print("Vamos agora ao relatório dos presentes!\n")
 
@@ -51,14 +50,11 @@ else:
     if porcentagem_outros > 50:
         print("Parece que o Papai Noel terá que fechar a fábrica :(")
     elif porcentagem_bonecos <= 50 and porcentagem_videogames <= 50 and porcentagem_bicicletas <= 50 and porcentagem_outros <= 50:
-        print("A fábrica está cumprindo seu papel, porém não precisa ser expandida")  
+        print("A fábrica está cumprindo seu papel, porém não precisa ser expandida")
     else:
         if porcentagem_bonecos > 50:
-            presente = "Boneco"
-            print(f"{presente} está sendo muito desejado! A fábrica terá que ser expandida!")
+            print(f"Boneco está sendo muito desejado! A fábrica terá que ser expandida!")
         elif porcentagem_videogames > 50:
-            presente = "Videogame"
-            print(f"{presente} está sendo muito desejado! A fábrica terá que ser expandida!")
+            print(f"Videogame está sendo muito desejado! A fábrica terá que ser expandida!")
         elif porcentagem_bicicletas > 50:
-            presente = "Bicicleta"
-            print(f"{presente} está sendo muito desejado! A fábrica terá que ser expandida!")
+            print(f"Bicicleta está sendo muito desejado! A fábrica terá que ser expandida!")
