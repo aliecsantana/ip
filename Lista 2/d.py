@@ -11,18 +11,18 @@ else:
         print("Infelizmente não poderemos comemorar o Natal esse ano, não conseguimos fazer uma única árvore!")
     # Exibe a árvore
     else:
-        for camada in range(altura_arvore + 1):
-            print("\u2800" * (altura_arvore - camada), end="")
+        for linha in range(altura_arvore + 1):
+            print("\u2800" * (altura_arvore - linha), end="")
             # Imprime a estrela
-            if camada == 0:
+            if linha == 0:
                 print("\u2800", end="")
                 print("*")
             # Imprime as folhas
             else:
                 print("\u2800", end="")
-                print("+" * camada, end="")
+                print("+" * linha, end="")
                 print("\u2800", end="")
-                print("+" * camada)
+                print("+" * linha)
         # Verifica se há folhas suficientes para fazer árvores para toda a população
         qtd_folhas_necessarias_populacao = qtd_folhas_necessarias * populacao
         if qtd_folhas_necessarias_populacao <= qtd_folhas:
