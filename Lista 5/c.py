@@ -65,7 +65,7 @@ def derivada_ordem_n(polinomio, k):
     elif polinomio == "0":
         return "0"
     else:
-        return derivada_ordem_n(derivada_polinomio(polinomio), k - 1) # Chama recursivamente a função para calcular a derivada de ordem 'k-1'
+        return derivada_ordem_n(derivada_polinomio(polinomio), k - 1) # Chama recursivamente a função para calcular a derivada de ordem "k-1"
 
 polinomio = input().strip()
 k = int(input().strip())
